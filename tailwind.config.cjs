@@ -85,10 +85,6 @@ module.exports = {
       ],
     },
     extend: {
-      backgroundImage: (theme) => ({
-        screens: "url('/path-to/image.png')",
-      }),
-
       colors: {
         charcoal: {
           50: "#ECEEEC",

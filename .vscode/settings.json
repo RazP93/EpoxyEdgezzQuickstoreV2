@@ -1,3 +1,8 @@
 {
-    "window.title": "${activeEditorShort}${separator}${rootName} ${separator} [Branch: master]${separator}[Branch: master]"
+  "window.title": "${activeEditorShort}${separator}${rootName} ${separator} [Branch: master]${separator}[Branch: master]",
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
 }

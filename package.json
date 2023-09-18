@@ -11,6 +11,14 @@
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.0.7"
+    "astro": "^3.0.7",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1"
   }
 }
