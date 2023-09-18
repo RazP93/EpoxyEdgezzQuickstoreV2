@@ -1,0 +1,29 @@
+---
+import pages from "@/data/pages.json";
+import siteData from "@/data/site.json";
+---
+
+<div class="flex items-center justify-between bg-charcoal-600/50 p-8">
+  <header>
+    <a href="/">{siteData.siteName}</a>
+  </header>
+  <div class="flex flex-col items-start gap-4 text-center">
+    <nav class="flex items-center gap-8">
+      {
+        pages.map(({ inHeader, name, url, icon }) => {
+          if (inHeader) {
+            return (
+              <a
+                href={url}
+                class="text-buttercup-200 hover:text-buttercup-500 flex gap-1 transition-colors duration-300"
+              >
+                {icon && <span>{icon}</span>}
+                <span>{name}</span>
+              </a>
+            );
+          }
+        })
+      }
+    </nav>
+  </div>
+</div>
