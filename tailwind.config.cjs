@@ -6,81 +6,51 @@ module.exports = {
   theme: {
     fontSize: {
       xs: [
-        "0.75rem",
+        "0.563rem",
         {
-          lineHeight: "1rem",
+          lineHeight: "9.00px",
         },
       ],
       sm: [
-        "0.875rem",
+        "0.75rem",
         {
-          lineHeight: "1.5rem",
+          lineHeight: "12.00px",
         },
       ],
       base: [
         "1rem",
         {
-          lineHeight: "1.75rem",
+          lineHeight: "16.00px",
         },
       ],
       lg: [
-        "1.125rem",
+        "1.333rem",
         {
-          lineHeight: "2rem",
+          lineHeight: "21.33px",
         },
       ],
       xl: [
-        "1.25rem",
+        "1.777rem",
         {
-          lineHeight: "2rem",
+          lineHeight: "28.43px",
         },
       ],
       "2xl": [
-        "1.5rem",
+        "2.369rem",
         {
-          lineHeight: "2rem",
+          lineHeight: "37.90px",
         },
       ],
       "3xl": [
-        "2rem",
+        "3.157rem",
         {
-          lineHeight: "2.5rem",
+          lineHeight: "50.52px",
         },
       ],
       "4xl": [
-        "2.5rem",
+        "4.209rem",
         {
-          lineHeight: "3.5rem",
-        },
-      ],
-      "5xl": [
-        "3rem",
-        {
-          lineHeight: "3.5rem",
-        },
-      ],
-      "6xl": [
-        "3.75rem",
-        {
-          lineHeight: "1",
-        },
-      ],
-      "7xl": [
-        "4.5rem",
-        {
-          lineHeight: "1.1",
-        },
-      ],
-      "8xl": [
-        "6rem",
-        {
-          lineHeight: "1",
-        },
-      ],
-      "9xl": [
-        "8rem",
-        {
-          lineHeight: "1",
+          lineHeight: "67.34px",
         },
       ],
     },
@@ -122,11 +92,39 @@ module.exports = {
           800: "#7F4F1F",
           900: "#422910",
         },
+        buttercup: {
+          DEFAULT: "#F2A10D",
+          50: "#FEF6E7",
+          100: "#FCECCF",
+          200: "#FADA9E",
+          300: "#F7C76E",
+          400: "#F5B43D",
+          500: "#F2A10D",
+          600: "#BD7E0A",
+          700: "#885A07",
+          800: "#523704",
+          900: "#1D1302",
+          950: "#020200",
+        },
+        persimmon: {
+          DEFAULT: "#FD664E",
+          50: "#FFEFED",
+          100: "#FFDCD6",
+          200: "#FEB4A9",
+          300: "#FE8D7B",
+          400: "#FD664E",
+          500: "#FC3211",
+          600: "#CE1E02",
+          700: "#921502",
+          800: "#550D01",
+          900: "#190400",
+          950: "#000000",
+        },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

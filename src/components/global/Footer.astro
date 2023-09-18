@@ -6,22 +6,23 @@ import pages from "@/data/pages.json";
   <div class="flex flex-col items-center gap-4 px-8 text-center">
     <nav class="flex items-center gap-8">
       {
-        pages.map(({ inFooter, name, url }) => {
+        pages.map(({ inFooter, name, url, icon }) => {
           if (inFooter) {
             return (
               <a
                 href={url}
-                class="h-8 text-sm text-negroni-500 transition-colors delay-150 hover:text-[#FFA500]"
+                class="text-buttercup-200 hover:text-buttercup-500 flex gap-1 transition-colors duration-300"
               >
-                {name}
+                {icon && <span>{icon}</span>}
+                <span>{name}</span>
               </a>
             );
           }
         })
       }
     </nav>
-    <div class="w-full border-t border-negroni-500/10 p-3">
-      <span class="text-sm text-[#fd664e]"> Designed with love by Raz</span>
+    <div class="w-full border-t border-negroni-500/10 p-2">
+      <span class="text-persimmon text-sm">Designed with love by Raz</span>
     </div>
   </div>
 </footer>

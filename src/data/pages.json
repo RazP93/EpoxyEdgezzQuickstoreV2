@@ -14,7 +14,7 @@
         "icon": false
     },
     {
-        "name": "Product Gallery",
+        "name": "Gallery",
         "url": "/gallery",
         "inHeader": true,
         "inFooter": true,
