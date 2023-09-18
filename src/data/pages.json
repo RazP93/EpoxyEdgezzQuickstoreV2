@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Home",
+        "url": "/",
+        "inHeader": false,
+        "inFooter": true,
+        "icon": false
+    },
+    {
+        "name": "About",
+        "url": "/about",
+        "inHeader": true,
+        "inFooter": true,
+        "icon": false
+    },
+    {
+        "name": "Product Gallery",
+        "url": "/gallery",
+        "inHeader": true,
+        "inFooter": true,
+        "icon": false
+    },
+    {
+        "name": "Contact",
+        "url": "/contact",
+        "inHeader": true,
+        "inFooter": true,
+        "icon": false
+    }
+]
