@@ -1,7 +1,7 @@
 ---
-import Header from "@/components/global/Header.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/global/Footer.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/ui/Header.astro";
+import Footer from "@/components/ui/Footer.astro";
 ---
 
 <html lang="en">
@@ -9,11 +9,13 @@ import Footer from "../components/global/Footer.astro";
     <BaseHead />
   </head>
 
-  <body class="bg-charcoal-700 text-charcoal-50">
+  <body
+    class="bg-bark-950 text-bark-50 flex min-h-screen flex-col justify-between"
+  >
     <Header />
-    <main>
+    <div class="pt-16">
       <slot />
-    </main>
+    </div>
     <Footer />
   </body>
 </html>

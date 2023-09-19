@@ -1,0 +1,32 @@
+---
+import pages from "@/data/pages.json";
+---
+
+<footer class="flex flex-col items-center gap-1 text-center">
+  <nav class="flex items-center gap-8 p-2">
+    {
+      pages.map(({ inFooter, name, url, icon }) => {
+        if (inFooter) {
+          return (
+            <a
+              href={url}
+              class={`hover:text-caramel-500 flex gap-1 transition-colors duration-300 ${
+                url === Astro.url.pathname
+                  ? "text-caramel-400 decoration-caramel-400/50 font-bold underline decoration-dotted decoration-1 underline-offset-4"
+                  : "text-caramel-200"
+              }`}
+            >
+              {icon && <span>{icon}</span>}
+              <span>{name}</span>
+            </a>
+          );
+        }
+      })
+    }
+  </nav>
+  <div
+    class="border-bark-500/10 flex w-full items-center justify-center gap-1 border-t p-2 text-center text-sm text-persimmon"
+  >
+    <span>&copy; {new Date().getFullYear()} · Designed with love by Raz</span>
+  </div>
+</footer>
