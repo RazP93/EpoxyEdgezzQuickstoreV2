@@ -1,10 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/landing/Hero.astro";
-import Products from "../components/landing/Products.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
 ---
 
-<BaseLayout>
+<Layout
+  title="Home · EpoxyEdgeZZ"
+  description="Passionate artisans dedicated to the art of epoxy resin, and our mission is to bring your dreams to life through our stunning epoxy tables and furnishings."
+>
   <Hero />
-  <Products />
-</BaseLayout>
+</Layout>

@@ -1,0 +1,50 @@
+---
+import { instagram } from '@/data/site.json';
+import Icon from 'astro-icon';
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
+    <div
+      class="flex flex-col items-center gap-8 rounded-3xl bg-caramel-400/10 px-5 py-16 sm:gap-10"
+    >
+      <div class="flex flex-col gap-4 sm:gap-6">
+        <h2 class="mx-auto max-w-sm text-3xl font-medium tracking-tight sm:text-4xl">
+          Join our journey
+        </h2>
+        <p class="mx-auto max-w-2xl text-lg text-caramel-200/70">
+          We invite you to explore our gallery of stunning epoxy creations and imagine how our
+          pieces can transform your living spaces. Whether you're a homeowner, interior designer, or
+          business owner, we're here to collaborate with you and make your design dreams a reality.
+        </p>
+      </div>
+      <a
+        class="font-Helvetica border-negroni-600 bg-negroni-600
+      text-charcoal-800 hover:border-negroni-500
+      hover:text-negroni-500 focus-visible:outline-negroni-600 focus-visible:ring-negroni-500 inline-flex
+      h-12 w-full items-center
+      justify-center rounded-full border-2
+      px-6
+      py-3 text-center
+      duration-200
+      hover:bg-orange-500 focus:outline-none lg:w-auto"
+        href="/gallery"
+      >
+        <span>See gallery</span>
+      </a>
+    </div>
+    <p class="mx-auto max-w-2xl text-lg text-caramel-200/70">
+      Thank you for considering EpoxyEdgeZZ for your epoxy table and furniture needs. We look
+      forward to being a part of your journey to elevate your living spaces with timeless elegance.
+    </p>
+    <p class="mx-auto max-w-2xl text-lg text-caramel-200/70">
+      Follow us on <a
+        href={instagram}
+        rel="noopener noreferrer"
+        target="_blank"
+        class="text-orange-500 underline"
+        ><Icon name="fa:instagram" class="inline h-4 w-4" /> Instagram</a
+      > for the latest updates, inspiration, and behind-the-scenes glimpses of our creative process.
+    </p>
+  </div>
+</section>

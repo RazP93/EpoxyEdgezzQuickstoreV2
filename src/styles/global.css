@@ -26,14 +26,6 @@ a {
   text-decoration: none;
 }
 
-.light {
-  --scrollbarColor: rgba(255, 255, 255, 0.75);
-}
-
-.dark {
-  --scrollbarColor: rgba(0, 0, 0, 0.75);
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -41,14 +33,6 @@ a {
 }
 
 @supports not (overflow: overlay) {
-  .light {
-    --scrollbarColor: rgba(0, 0, 0, 0.75);
-  }
-
-  .dark {
-    --scrollbarColor: rgba(255, 255, 255, 0.75);
-  }
-
   *::-webkit-scrollbar {
     width: var(--theme-width);
   }

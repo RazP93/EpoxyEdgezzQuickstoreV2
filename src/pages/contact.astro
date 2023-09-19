@@ -1,8 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import ContactUs from "../components/landing/ContactUs.astro";
+import HowToOrder from '@/components/contact/HowToOrder.astro';
+import Layout from '../layouts/Layout.astro';
+import ContactInfo from '@/components/contact/ContactInfo.astro';
 ---
 
-<BaseLayout>
-  <ContactUs />
-</BaseLayout>
+<Layout
+  description="Contact our team to learn more about how we can help you."
+  title="About · EpoxyEdgeZZ"
+>
+  <HowToOrder />
+  <ContactInfo />
+</Layout>

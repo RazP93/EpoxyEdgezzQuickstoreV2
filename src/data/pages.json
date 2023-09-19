@@ -14,6 +14,13 @@
         "icon": false
     },
     {
+        "name": "Privacy",
+        "url": "/privacy",
+        "inHeader": false,
+        "inFooter": true,
+        "icon": false
+    },
+    {
         "name": "Gallery",
         "url": "/gallery",
         "inHeader": true,

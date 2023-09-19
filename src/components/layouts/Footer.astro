@@ -2,7 +2,11 @@
 import pages from "@/data/pages.json";
 ---
 
-<footer class="flex flex-col items-center gap-1 text-center">
+<footer
+  class="flex flex-col items-center gap-1 text-center"
+  aria-labelledby="footer-heading"
+>
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
   <nav class="flex items-center gap-8 p-2">
     {
       pages.map(({ inFooter, name, url, icon }) => {

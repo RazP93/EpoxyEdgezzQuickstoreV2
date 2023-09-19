@@ -74,6 +74,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        transparent: "transparent",
+        white: "#FFFFFF",
         persimmon: {
           DEFAULT: "#FD664E",
           50: "#FFEFED",

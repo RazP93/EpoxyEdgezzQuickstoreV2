@@ -1,8 +1,17 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import AboutUs from "../components/landing/AboutUs.astro";
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/about/Heading.astro";
+import Product from "../components/about/Product.astro";
+import Values from "@/components/about/Values.astro";
+import Cta from "@/components/about/Cta.astro";
 ---
 
-<BaseLayout>
-  <AboutUs />
-</BaseLayout>
+<Layout
+  title="About · EpoxyEdgeZZ"
+  description="Find more our history, values, mission and more. We are a group of people who share the same values."
+>
+  <Heading />
+  <Product />
+  <Values />
+  <Cta />
+</Layout>
