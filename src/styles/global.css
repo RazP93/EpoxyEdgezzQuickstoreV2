@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-main: 155, 0, 176; /* Fallback */
+  --color-secondary: 241, 90, 90; /* Fallback */
+  --theme-width: 0.5rem;
+  --scrollbarColor: theme(colors.caramel.400);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.light {
+  --scrollbarColor: rgba(255, 255, 255, 0.75);
+}
+
+.dark {
+  --scrollbarColor: rgba(0, 0, 0, 0.75);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@supports not (overflow: overlay) {
+  .light {
+    --scrollbarColor: rgba(0, 0, 0, 0.75);
+  }
+
+  .dark {
+    --scrollbarColor: rgba(255, 255, 255, 0.75);
+  }
+
+  *::-webkit-scrollbar {
+    width: var(--theme-width);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10vw;
+    border: calc(var(--theme-width) / 3) solid transparent;
+    box-shadow: inset 0 0 0 calc(var(--theme-width) * 2) var(--scrollbarColor);
+  }
+}
+
+@supports (overflow: overlay) {
+  html {
+    overflow: overlay;
+  }
+
+  *::-webkit-scrollbar {
+    width: var(--theme-width);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10vw;
+    border: calc(var(--theme-width) / 3) solid transparent;
+    box-shadow: inset 0 0 0 calc(var(--theme-width) * 2) var(--scrollbarColor);
+  }
+}
+
+*::selection {
+  background: rgba(var(--color-main), 0.75);
+  color: rgba(var(--color-secondary));
+}
