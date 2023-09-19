@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.8",
+    "astro-compress": "^2.0.15",
     "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",
     "tailwindcss-animate": "^1.0.7"
