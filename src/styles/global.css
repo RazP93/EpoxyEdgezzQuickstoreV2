@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-main: 155, 0, 176; /* Fallback */
-  --color-secondary: 241, 90, 90; /* Fallback */
+  --color-main: 75, 69, 65; /* Fallback */
+  --color-secondary: 249, 115, 22; /* Fallback */
   --theme-width: 0.5rem;
   --scrollbarColor: theme(colors.caramel.400);
 }

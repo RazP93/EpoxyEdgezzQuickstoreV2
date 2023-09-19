@@ -1,13 +1,13 @@
 ---
 import pages from "@/data/pages.json";
-import siteData from "@/data/site.json";
+import { siteName } from "@/data/site.json";
 ---
 
 <div
   class="bg-bark-950/50 fixed z-10 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-md md:h-16 md:flex-row md:px-8"
 >
   <header>
-    <a href="/">{siteData.siteName}</a>
+    <a href="/">{siteName}</a>
   </header>
   <nav class="flex items-center gap-8">
     {
