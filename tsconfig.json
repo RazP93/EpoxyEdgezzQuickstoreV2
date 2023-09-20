@@ -8,13 +8,28 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@data/*": ["src/_data/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@utils/*": ["src/utils/*"],
-      "@images/*": ["src/assets/images/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+      "@/*": ["src/*"],
+      "@data/*": [
+        "src/_data/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@images/*": [
+        "src/assets/images/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/base"
 }

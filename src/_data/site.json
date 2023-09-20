@@ -1,45 +1,62 @@
 {
-    "siteName": "EpoxyEdgeZZ",
-    "siteUrl": "https://epoxyedgezz.ie",
-    "instagram": "https://www.instagram.com/epoxyedgezz/",
-    "email": "hello@epoxyedgezz.ie",
-    "phone": "+35712345678",
-    "location": "Sligo, Ireland",
-    "pages": [
-        {
-            "name": "Home",
-            "url": "/",
-            "inHeader": false,
-            "inFooter": true,
-            "icon": false
-        },
-        {
-            "name": "About",
-            "url": "/about",
-            "inHeader": true,
-            "inFooter": true,
-            "icon": false
-        },
-        {
-            "name": "Privacy",
-            "url": "/privacy",
-            "inHeader": false,
-            "inFooter": true,
-            "icon": false
-        },
-        {
-            "name": "Gallery",
-            "url": "/gallery",
-            "inHeader": true,
-            "inFooter": true,
-            "icon": false
-        },
-        {
-            "name": "Contact",
-            "url": "/contact",
-            "inHeader": true,
-            "inFooter": true,
-            "icon": false
+    "siteInfo": {
+        "name": "EpoxyEdgeZZ",
+        "description": "EpoxyEdgeZZ is a family run business based in Sligo, Ireland. We specialise in creating bespoke resin furniture and homeware. We also offer a range of other services including resin flooring, resin countertops, resin wall art and more.",
+        "ogImage": "/images/og-image.jpg",
+        "url": "https://epoxyedgezz.ie",
+        "email": "hello@epoxyedgezz.ie",
+        "phone": "+35712345678",
+        "location": "Sligo, Ireland",
+        "socials": {
+            "instagram": "https://www.instagram.com/epoxyedgezz/",
+            "facebook": "https://www.facebook.com/epoxyedgezz/"
         }
-    ]
+    },
+    "pages": {
+        "HOME": {
+            "name": "Home",
+            "href": "/",
+            "title": "Home",
+            "description": "EpoxyEdgeZZ is a family run business based in Sligo, Ireland. We specialise in creating bespoke resin furniture and homeware. We also offer a range of other services including resin flooring, resin countertops, resin wall art and more.",
+            "ogImage": null,
+            "inHeader": false,
+            "inFooter": true
+        },
+        "ABOUT": {
+            "name": "About",
+            "href": "/about",
+            "title": "About Us",
+            "description": "Learn more about our history, values, mission, and more. We are a collection of people who hold similar ideals.",
+            "ogImage": null,
+            "inHeader": true,
+            "inFooter": true
+        },
+        "GALLERY": {
+            "name": "Gallery",
+            "href": "/gallery",
+            "title": "Product Gallery",
+            "description": "Browse our gallery of past projects. We have a wide range of projects from resin furniture to resin flooring.",
+            "ogImage": null,
+            "inHeader": true,
+            "inFooter": true
+        },
+        "PRIVACY": {
+            "name": "Privacy",
+            "href": "/privacy",
+            "title": "Privacy Policy",
+            "description": "Our privacy policy outlines how we collect, use, and store your data. We take your privacy very seriously.",
+            "ogImage": null,
+            "inHeader": false,
+            "inFooter": true
+        },
+        "CONTACT": {
+            "name": "Contact",
+            "href": "/contact",
+            "title": "Contact Us",
+            "description": "Get in touch with us today to discuss your project. We are always happy to help.",
+            "ogImage": null,
+            "inHeader": true,
+            "inFooter": true
+        }
+    }
 }

@@ -1,30 +1,32 @@
 ---
-import { siteName, pages } from '@data/site.json';
-import { trimPath } from '@utils/cleanPath';
+import { siteInfo, pages } from '@data/site.json';
+import { setPagesArray, trimPathname } from '@/lib/utils';
 
-const currentPath = trimPath(Astro.url.pathname);
+const { name } = siteInfo;
+const pagesArray = setPagesArray(pages);
+
+const currentPath = trimPathname(Astro.url.pathname);
 ---
 
 <div
   class="fixed z-10 flex w-full flex-col items-center justify-between gap-4 bg-bark-950/50 p-4 backdrop-blur-md md:h-16 md:flex-row md:px-8"
 >
   <header>
-    <a href="/">{siteName}</a>
+    <a href="/">{name}</a>
   </header>
   <nav class="flex items-center gap-8" data-path={currentPath}>
     {
-      pages.map(({ inHeader, name, url, icon }) => {
+      pagesArray.map(({ name, href, inHeader }) => {
         if (inHeader) {
           return (
             <a
-              href={url}
+              href={href}
               class={`relative flex gap-1 font-bold transition-all duration-300 hover:text-caramel-500 ${
-                url === currentPath ? 'text-caramel-400' : 'text-caramel-200'
+                href === currentPath ? 'text-caramel-400' : 'text-caramel-200'
               }`}
             >
-              {icon && <span>{icon}</span>}
               <span>{name}</span>
-              {url === currentPath && (
+              {href === currentPath && (
                 <div class="absolute -bottom-0.5 left-1/2 aspect-square h-1 -translate-x-1/2 transform animate-down rounded-full bg-current" />
               )}
             </a>

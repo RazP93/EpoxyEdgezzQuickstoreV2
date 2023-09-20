@@ -1,47 +1,34 @@
 ---
-import { instagram } from '@data/site.json';
+import { siteInfo, pages } from '@data/site.json';
 import { Icon } from 'astro-icon';
+import { Button, buttonVariants } from '@/components/ui/Button';
+import { Link } from '@/components/ui/Link';
 ---
 
 <section class="py-16 sm:py-20">
   <div class="relative mx-auto max-w-7xl p-24 px-8 md:px-12 lg:px-36">
     <div class="mx-auto text-center">
-      <h1 class="sm:text-5xl lg:text-6xl text-4xl font-medium tracking-tight text-caramel">
+      <h1
+        class="text-dynamic-xl bg-gradient-to-br from-caramel-600 to-caramel-300 bg-clip-text font-bold tracking-tighter text-caramel text-transparent"
+      >
         EpoxyEdgeZZ
       </h1>
-      <p class="text-primary-950/70 text-lg sm:text-xl">Irish Based Epoxy Table Craftman</p>
+      <p class="text-dynamic-sm font-bold tracking-tight text-bark-400/70">
+        Irish-based Epoxy Table Craftman
+      </p>
     </div>
 
-    <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+    <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
       <a
-        class="font-Helvetica border-negroni-600 bg-negroni-600
-        text-charcoal-800 hover:border-negroni-500
-        hover:text-negroni-500 focus-visible:outline-negroni-600 focus-visible:ring-negroni-500 inline-flex
-        h-12 w-full items-center
-        justify-center rounded-full border-2
-        px-6
-        py-3 text-center
-        duration-200
-        hover:bg-orange-500 focus:outline-none lg:w-auto"
-        href={instagram}
+        class={buttonVariants({ variant: 'outline', size: 'lg' })}
+        href={siteInfo.socials.instagram}
         rel="noopener noreferrer"
         target="_blank"
       >
         <Icon name="fa:instagram" class="h-4 w-4" />
         <span>Instagram</span>
       </a>
-      <a
-        class="font-Helvetica border-negroni-600 bg-negroni-600
-        text-charcoal-800 hover:border-negroni-500
-        hover:text-negroni-500 focus-visible:outline-negroni-600 focus-visible:ring-negroni-500 inline-flex
-        h-12 w-full items-center
-        justify-center rounded-full border-2
-        px-6
-        py-3 text-center
-        duration-200
-        hover:bg-orange-500 focus:outline-none lg:w-auto"
-        href="/gallery"
-      >
+      <a class={buttonVariants({ size: 'lg' })} href={pages.GALLERY.href}>
         <span>See gallery</span>
       </a>
     </div>
