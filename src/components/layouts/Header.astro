@@ -2,7 +2,8 @@
 import pages from '@/data/pages.json';
 import { siteName } from '@/data/site.json';
 
-const currentPath = Astro.url.pathname;
+const { pathname } = new URL(Astro.request.url);
+const currentPath = pathname.slice(1);
 ---
 
 <div
@@ -27,6 +28,9 @@ const currentPath = Astro.url.pathname;
               {url === currentPath && (
                 <div class="absolute -bottom-0.5 left-1/2 aspect-square h-1 -translate-x-1/2 transform animate-down rounded-full bg-current" />
               )}
+              <script>
+                console.log('currentPath', {currentPath}); console.log('url', {url});
+              </script>
             </a>
           );
         }
