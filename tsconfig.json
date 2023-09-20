@@ -8,7 +8,12 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@data/*": ["src/_data/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@utils/*": ["src/utils/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "extends": "astro/tsconfigs/base"

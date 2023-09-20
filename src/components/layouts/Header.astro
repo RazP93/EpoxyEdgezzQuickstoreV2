@@ -1,7 +1,6 @@
 ---
-import pages from '@/data/pages.json';
-import { siteName } from '@/data/site.json';
-import { trimPath } from '@/utils/cleanPath';
+import { siteName, pages } from '@data/site.json';
+import { trimPath } from '@utils/cleanPath';
 
 const currentPath = trimPath(Astro.url.pathname);
 ---

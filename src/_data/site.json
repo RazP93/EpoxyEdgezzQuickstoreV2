@@ -1,0 +1,45 @@
+{
+    "siteName": "EpoxyEdgeZZ",
+    "siteUrl": "https://epoxyedgezz.ie",
+    "instagram": "https://www.instagram.com/epoxyedgezz/",
+    "email": "hello@epoxyedgezz.ie",
+    "phone": "+35712345678",
+    "location": "Sligo, Ireland",
+    "pages": [
+        {
+            "name": "Home",
+            "url": "/",
+            "inHeader": false,
+            "inFooter": true,
+            "icon": false
+        },
+        {
+            "name": "About",
+            "url": "/about",
+            "inHeader": true,
+            "inFooter": true,
+            "icon": false
+        },
+        {
+            "name": "Privacy",
+            "url": "/privacy",
+            "inHeader": false,
+            "inFooter": true,
+            "icon": false
+        },
+        {
+            "name": "Gallery",
+            "url": "/gallery",
+            "inHeader": true,
+            "inFooter": true,
+            "icon": false
+        },
+        {
+            "name": "Contact",
+            "url": "/contact",
+            "inHeader": true,
+            "inFooter": true,
+            "icon": false
+        }
+    ]
+}

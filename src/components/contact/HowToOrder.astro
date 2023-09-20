@@ -1,6 +1,5 @@
 ---
-import Icon from 'astro-icon';
-import { phone, email } from '@/data/site.json';
+import { phone, email } from '@data/site.json';
 ---
 
 <section class="py-16 sm:py-20">
@@ -14,9 +13,9 @@ import { phone, email } from '@/data/site.json';
       <li>We'll present you with different options for table legs when it's close to completion</li>
     </ol>
     <p class="font-Helvetica mt-4 text-lg">
-      E-Mail: contact@example.com
+      E-Mail: {email}
       <br />
-       Phone: +353121212
+       Phone: {phone}
     </p>
   </div>
 </section>
