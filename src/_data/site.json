@@ -57,6 +57,15 @@
             "ogImage": null,
             "inHeader": true,
             "inFooter": true
+        },
+        "404": {
+            "name": "404",
+            "href": "/404",
+            "title": "Page Not Found",
+            "description": "Page not found. Please check the URL in the address bar and try again.",
+            "ogImage": null,
+            "inHeader": false,
+            "inFooter": false
         }
     }
 }

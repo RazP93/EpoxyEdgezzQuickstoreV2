@@ -5,12 +5,10 @@ import Product from '@components/about/Product.astro';
 import Values from '@components/about/Values.astro';
 import Cta from '@components/about/Cta.astro';
 import Thanks from '@/components/about/Thanks.astro';
+import { pages } from '@data/site.json';
 ---
 
-<Layout
-  title="About · EpoxyEdgeZZ"
-  description="Find more our history, values, mission and more. We are a group of people who share the same values."
->
+<Layout title={pages.ABOUT.title} description={pages.ABOUT.description}>
   <Heading />
   <Product />
   <Values />

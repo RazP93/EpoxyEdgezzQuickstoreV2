@@ -1,11 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import { pages } from '@data/site.json';
 ---
 
-<Layout
-  description="Page not found. Please check the URL in the address bar and try again."
-  title="Not found · Stone"
->
+<Layout title={pages[404].title} description={pages[404].description}>
   <section class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="flex flex-col items-start gap-8 sm:gap-10">

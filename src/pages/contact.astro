@@ -2,12 +2,10 @@
 import HowToOrder from '@components/contact/HowToOrder.astro';
 import Layout from '@layouts/Layout.astro';
 import ContactInfo from '@components/contact/ContactInfo.astro';
+import { pages } from '@data/site.json';
 ---
 
-<Layout
-  description="Contact our team to learn more about how we can help you."
-  title="About · EpoxyEdgeZZ"
->
+<Layout title={pages.CONTACT.title} description={pages.CONTACT.description}>
   <HowToOrder />
   <ContactInfo />
 </Layout>

@@ -61,6 +61,6 @@ a {
 }
 
 *::selection {
-  background: rgba(var(--color-main), 0.75);
-  color: rgba(var(--color-secondary));
+  background: theme(colors.caramel.500);
+  color: theme(colors.bark.950);
 }

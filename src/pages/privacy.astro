@@ -1,14 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import { siteInfo } from '@data/site.json';
+import { siteInfo, pages } from '@data/site.json';
+import { Link } from '@/components/ui/Link';
 
 const { email, name } = siteInfo;
 ---
 
-<Layout
-  description="Our privacy policy will help you understand what information is collected and how it is used."
-  title="Privacy policy · Stone"
->
+<Layout title={pages.PRIVACY.title} description={pages.PRIVACY.description}>
   <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
     <div class="sm:pb:20 flex flex-col gap-4 pb-16 text-center">
       <h1 class="sm:text-5xl text-4xl font-medium tracking-tight">Privacy Policy</h1>
@@ -56,10 +54,11 @@ const { email, name } = siteInfo;
       </ul>
       <h2 class="mb-6 mt-12 text-xl font-medium sm:text-2xl">Contact Us</h2>
       <p class="mb-4">
-        If you have any questions or concerns about our Privacy Policy, please contact us <a
+        If you have any questions or concerns about our Privacy Policy, please contact us <Link
           href={`mailto:${email}`}
-          class="text-caramel-600 hover:underline">via email</a
-        >.
+        >
+          via email
+        </Link>.
       </p>
     </div>
   </div>

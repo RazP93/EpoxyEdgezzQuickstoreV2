@@ -1,11 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/home/Hero.astro';
+import { pages } from '@data/site.json';
 ---
 
-<Layout
-  title="Home · EpoxyEdgeZZ"
-  description="Passionate artisans dedicated to the art of epoxy resin, and our mission is to bring your dreams to life through our stunning epoxy tables and furnishings."
->
+<Layout title={pages.HOME.title} description={pages.HOME.description}>
   <Hero />
 </Layout>
