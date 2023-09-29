@@ -9,24 +9,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@data/*": [
-        "src/_data/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@images/*": [
-        "src/assets/images/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ]
+      "@/data/*": ["src/_data/*"],
+      "@/images/*": ["src/assets/images/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

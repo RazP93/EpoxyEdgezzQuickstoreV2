@@ -1,9 +1,10 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Header from '@components/layouts/Header.astro';
-import Footer from '@components/layouts/Footer.astro';
-import '@styles/global.css';
-import { siteInfo } from '@data/site.json';
+import { siteInfo } from "@/data/site.json";
+import "@/styles/global.css";
+import Header from "@/components/layouts/Header.astro";
+import Footer from "@/components/layouts/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import Background from "@/components/layouts/Background.astro";
 
 interface Props {
   title: string;
@@ -18,57 +19,18 @@ const { description, title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description ?? siteInfo.description} />
     <title>{title} · {siteInfo.name}</title>
-    <ViewTransitions />
   </head>
-  <body class="flex min-h-screen flex-col justify-between bg-background text-bark-50">
+  <body
+    class="bg-background relative flex min-h-screen flex-col justify-between text-bark-50"
+  >
     <Header />
     <main class="pt-16">
       <slot />
     </main>
     <Footer />
-    <script>
-      const themeStore = {
-        isDark: (() => {
-          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-            return localStorage.getItem('theme') === 'dark';
-          }
-          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return true;
-          }
-          return false;
-        })(),
-
-        toggle() {
-          this.isDark = !this.isDark;
-          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-          updateTheme();
-        },
-      };
-
-      function updateTheme() {
-        if (themeStore.isDark) {
-          document.body.classList.add('dark');
-        } else {
-          document.body.classList.remove('dark');
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        updateTheme();
-        const themeToggleButton = document.querySelector('#theme-toggle');
-        if (themeToggleButton) {
-          themeToggleButton.addEventListener('click', () => {
-            themeStore.toggle();
-          });
-        }
-      });
-    </script>
+    <Background />
   </body>
 </html>

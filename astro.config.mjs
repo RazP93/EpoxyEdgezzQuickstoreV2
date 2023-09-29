@@ -1,9 +1,8 @@
-import compress from 'astro-compress';
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import { siteInfo } from './src/_data/site.json';
-import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import { siteInfo } from "./src/_data/site.json";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: siteInfo.url,
@@ -12,7 +11,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
-    compress(),
     react(),
   ],
 });

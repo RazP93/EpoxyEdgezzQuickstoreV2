@@ -64,3 +64,10 @@ a {
   background: theme(colors.caramel.500);
   color: theme(colors.bark.950);
 }
+
+@supports (mix-blend-mode: overlay) {
+  #background {
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+  }
+}

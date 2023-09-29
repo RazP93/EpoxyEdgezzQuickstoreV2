@@ -1,6 +1,6 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import { pages } from '@data/site.json';
+import Layout from "@/layouts/Layout.astro";
+import { pages } from "@/data/site.json";
 ---
 
 <Layout title={pages[404].title} description={pages[404].description}>
@@ -8,11 +8,15 @@ import { pages } from '@data/site.json';
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="flex flex-col items-start gap-8 sm:gap-10">
         <div class="flex flex-col gap-4 sm:gap-6">
-          <h1 class="sm:text-5xl lg:text-6xl text-4xl font-medium tracking-tight">
+          <h1
+            class="sm:text-5xl lg:text-6xl text-4xl font-medium tracking-tight"
+          >
             <div>404</div>
             <div>Page not found</div>
           </h1>
-          <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
+          <p
+            class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl"
+          >
             Please check the URL in the address bar and try again.
           </p>
         </div>

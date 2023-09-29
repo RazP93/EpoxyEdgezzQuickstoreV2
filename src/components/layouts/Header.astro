@@ -1,6 +1,6 @@
 ---
-import { siteInfo, pages } from '@data/site.json';
-import { setPagesArray, trimPathname } from '@/lib/utils';
+import { siteInfo, pages } from "@/data/site.json";
+import { setPagesArray, trimPathname } from "@/lib/utils";
 
 const { name } = siteInfo;
 const pagesArray = setPagesArray(pages);
@@ -22,7 +22,7 @@ const currentPath = trimPathname(Astro.url.pathname);
             <a
               href={href}
               class={`relative flex gap-1 font-bold transition-all duration-300 hover:text-caramel-500 ${
-                href === currentPath ? 'text-caramel-400' : 'text-caramel-200'
+                href === currentPath ? "text-caramel-400" : "text-caramel-200"
               }`}
             >
               <span>{name}</span>

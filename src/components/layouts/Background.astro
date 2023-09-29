@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import bgImage from "@/images/background.jpg";
+---
+
+<div
+  id="background"
+  class="pointer-events-none fixed inset-0 -z-10 overflow-hidden opacity-10"
+>
+  <Image
+    src={bgImage}
+    alt="Background image"
+    class="h-full w-full object-cover object-center"
+  />
+</div>
