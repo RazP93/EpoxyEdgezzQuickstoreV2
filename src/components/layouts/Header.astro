@@ -9,7 +9,7 @@ const currentPath = trimPathname(Astro.url.pathname);
 ---
 
 <div
-  class="fixed z-10 flex w-full flex-col items-center justify-between gap-4 bg-bark-950/50 p-4 backdrop-blur-md md:h-16 md:flex-row md:px-8"
+  class="fixed z-10 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-sm md:h-16 md:flex-row md:px-8"
 >
   <header>
     <a href="/">{name}</a>
@@ -35,4 +35,6 @@ const currentPath = trimPathname(Astro.url.pathname);
       })
     }
   </nav>
+  <div class="absolute inset-0 bg-noise saturate-0 opacity-10 -z-10 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-bark-900 opacity-20 -z-20 pointer-events-none"></div>
 </div>

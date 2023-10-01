@@ -152,6 +152,9 @@ module.exports = {
           950: '#050F09',
         },
       },
+      backgroundImage: {
+        "noise": "url('../assets/images/noise.svg')",
+      },
       screens: {
         xs: '425px',
       },
