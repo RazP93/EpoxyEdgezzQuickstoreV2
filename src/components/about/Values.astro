@@ -1,15 +1,23 @@
 ---
+import House from '@/images/values/house.png';
+import Lorry from '@/images/values/lorry.png';
+import Tree from '@/images/values/tree.png';
+import Man from '@/images/values/man.png';
+import { Image } from 'astro:assets';
+
 const values = [
   [
     {
       ref: '01',
       name: 'Craftsmanship',
+      img: House,
       description:
         "At EpoxyEdgeZZ, we believe that every piece of furniture should tell a story. That's why we pour our heart and soul into every creation, meticulously handcrafting each epoxy table to perfection. Our team of skilled artisans combines the latest techniques in epoxy resin artistry with time-tested woodworking methods to create pieces that are not only functional but also visually captivating.",
     },
     {
       ref: '02',
       name: 'Innovation',
+      img: Lorry,
       description:
         "At EpoxyEdgeZZ, we know that every space is unique, and your furniture should reflect your individuality. Whether you're looking for a dining table that becomes the centerpiece of your home or a bespoke coffee table to tie your living room together, we offer custom design services to bring your vision to life. Our team will work closely with you to select the perfect wood, color, and design elements to create a one-of-a-kind masterpiece.",
     },
@@ -18,12 +26,14 @@ const values = [
     {
       ref: '03',
       name: 'Sustainability',
+      img: Tree,
       description:
         "We are deeply committed to preserving the environment for future generations. Our eco-friendly practices include using sustainable wood sources, minimizing waste in our production process, and recycling materials whenever possible. Rest assured that when you choose [Your Epoxy Table Business Name], you're not just investing in artistry but also contributing to a greener, more sustainable world.",
     },
     {
       ref: '04',
       name: 'Dedication',
+      img: Man,
       description:
         "We are passionate about what we do, and it shows in every piece we create. Our team of artisans is dedicated to providing you with the highest quality products and service possible. We take pride in our work and stand behind it 100%. If you're not completely satisfied with your purchase, we'll make it right. That's our promise to you.",
     },
@@ -42,8 +52,8 @@ const values = [
           values.map((column, index) => (
             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
               {column.map((value) => (
-                <div class="flex flex-col gap-3 rounded-3xl bg-caramel-300/5 px-6 py-8">
-                  <p class="text-xl font-black text-bark-800">{value.ref}</p>
+                <div class="flex flex-col gap-3 rounded-3xl bg-caramel-400/5 px-6 py-8 backdrop-blur-sm">
+                  <Image src={value.img} alt={value.name} class="h-full w-32 select-none" />
                   <div class="flex flex-col gap-4">
                     <h3 class="text-xl font-bold text-caramel-300">{value.name}</h3>
                     <p class="text-base sm:text-lg">{value.description}</p>
