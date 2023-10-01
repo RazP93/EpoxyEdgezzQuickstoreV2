@@ -12,51 +12,51 @@ module.exports = {
   theme: {
     fontSize: {
       xs: [
-        '0.563rem',
-        {
-          lineHeight: '9.00px',
-        },
-      ],
-      sm: [
-        '0.75rem',
+        '9.00px',
         {
           lineHeight: '12.00px',
         },
       ],
-      base: [
-        '1rem',
+      sm: [
+        '12.00px',
         {
           lineHeight: '16.00px',
         },
       ],
-      lg: [
-        '1.333rem',
+      base: [
+        '16.00px',
         {
-          lineHeight: '21.33px',
+          lineHeight: '24.00px',
+        },
+      ],
+      lg: [
+        '20px',
+        {
+          lineHeight: '24px',
         },
       ],
       xl: [
-        '1.777rem',
+        '32px',
         {
-          lineHeight: '28.43px',
+          lineHeight: '40px',
         },
       ],
       '2xl': [
-        '2.369rem',
+        '40px',
         {
-          lineHeight: '37.90px',
+          lineHeight: '56px',
         },
       ],
       '3xl': [
-        '3.157rem',
+        '48px',
         {
-          lineHeight: '50.52px',
+          lineHeight: '64px',
         },
       ],
       '4xl': [
-        '4.209rem',
+        '64px',
         {
-          lineHeight: '67.34px',
+          lineHeight: '80px',
         },
       ],
       'dynamic-sm': [
@@ -153,7 +153,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "noise": "url('../assets/images/noise.svg')",
+        noise: "url('../assets/images/noise.svg')",
       },
       screens: {
         xs: '425px',

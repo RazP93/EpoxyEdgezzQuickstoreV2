@@ -1,28 +1,25 @@
 ---
-import { siteInfo, pages } from "@/data/site.json";
-import Icon from "astro-icon";
-import { buttonVariants } from "../ui/Button";
+import { siteInfo, pages } from '@/data/site.json';
+import Icon from 'astro-icon';
+import { buttonVariants } from '../ui/Button';
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
     <div
-      class="flex flex-col items-center gap-8 rounded-3xl bg-caramel-400/10 px-5 py-16 sm:gap-10"
+      class="flex flex-col items-center gap-8 rounded-3xl px-5 py-16 ring-1 ring-bark-600/20 backdrop-blur-sm sm:gap-10"
     >
       <div class="flex flex-col gap-4 sm:gap-6">
-        <h2
-          class="mx-auto max-w-sm text-3xl font-medium tracking-tight sm:text-4xl"
-        >
+        <h2 class="mx-auto max-w-sm text-2xl font-bold tracking-tighter text-caramel-400">
           Join our journey
         </h2>
-        <p class="mx-auto max-w-2xl text-lg text-caramel-200/70">
-          We invite you to explore our gallery of stunning epoxy creations and
-          imagine how our pieces can transform your living spaces. Whether
-          you're a homeowner, interior designer, or business owner, we're here
-          to collaborate with you and make your design dreams a reality.
+        <p class="mx-auto max-w-3xl text-lg text-caramel-200">
+          We invite you to explore our gallery of stunning epoxy creations and imagine how our
+          pieces can transform your living spaces. Whether you're a homeowner, interior designer, or
+          business owner, we're here to collaborate with you and make your design dreams a reality.
         </p>
       </div>
-      <a class={buttonVariants({ size: "lg" })} href={pages.GALLERY.href}>
+      <a class={buttonVariants({ size: 'lg' })} href={pages.GALLERY.href}>
         <span>See gallery</span>
       </a>
     </div>
