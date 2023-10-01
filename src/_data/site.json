@@ -66,6 +66,15 @@
             "ogImage": null,
             "inHeader": false,
             "inFooter": false
+        },
+        "500": {
+            "name": "500",
+            "href": "/500",
+            "title": "Internal Server Error",
+            "description": "Internal server error. Please try again later.",
+            "ogImage": null,
+            "inHeader": false,
+            "inFooter": false
         }
     }
 }
