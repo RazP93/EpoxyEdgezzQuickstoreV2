@@ -1,6 +1,8 @@
 ---
-import { siteInfo, pages } from "@/data/site.json";
-import { setPagesArray, trimPathname } from "@/lib/utils";
+import { siteInfo, pages } from '@/data/site.json';
+import { setPagesArray, trimPathname } from '@/lib/utils';
+import { Image } from 'astro:assets';
+import logoSrc from '@/images/logo.svg';
 
 const { name } = siteInfo;
 const pagesArray = setPagesArray(pages);
@@ -9,32 +11,35 @@ const currentPath = trimPathname(Astro.url.pathname);
 ---
 
 <div
-  class="fixed z-10 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-sm md:h-16 md:flex-row md:px-8"
+  class="sticky top-0 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-sm md:flex-row md:px-8"
 >
+  <a href="/">
+    <span class="sr-only">{name}</span>
+    <Image class="h-16 w-16 md:h-10 md:w-10" src={logoSrc} alt={`Logo for ${name}`} />
+  </a>
   <header>
-    <a href="/">{name}</a>
+    <nav class="flex items-center gap-8" data-path={currentPath}>
+      {
+        pagesArray.map(({ name, href, inHeader }) => {
+          if (inHeader) {
+            return (
+              <a
+                href={href}
+                class={`relative flex gap-1 font-bold transition-all duration-300 hover:text-caramel-500 ${
+                  href === currentPath ? 'text-caramel-400' : 'text-caramel-200'
+                }`}
+              >
+                <span>{name}</span>
+                {href === currentPath && (
+                  <div class="absolute -bottom-0.5 left-1/2 aspect-square h-1 -translate-x-1/2 transform animate-down rounded-full bg-current" />
+                )}
+              </a>
+            );
+          }
+        })
+      }
+    </nav>
+    <div class="pointer-events-none absolute inset-0 -z-10 bg-noise opacity-10 saturate-0"></div>
+    <div class="pointer-events-none absolute inset-0 -z-20 bg-bark-900 opacity-20"></div>
   </header>
-  <nav class="flex items-center gap-8" data-path={currentPath}>
-    {
-      pagesArray.map(({ name, href, inHeader }) => {
-        if (inHeader) {
-          return (
-            <a
-              href={href}
-              class={`relative flex gap-1 font-bold transition-all duration-300 hover:text-caramel-500 ${
-                href === currentPath ? "text-caramel-400" : "text-caramel-200"
-              }`}
-            >
-              <span>{name}</span>
-              {href === currentPath && (
-                <div class="absolute -bottom-0.5 left-1/2 aspect-square h-1 -translate-x-1/2 transform animate-down rounded-full bg-current" />
-              )}
-            </a>
-          );
-        }
-      })
-    }
-  </nav>
-  <div class="absolute inset-0 bg-noise saturate-0 opacity-10 -z-10 pointer-events-none"></div>
-  <div class="absolute inset-0 bg-bark-900 opacity-20 -z-20 pointer-events-none"></div>
 </div>

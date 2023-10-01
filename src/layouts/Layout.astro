@@ -1,10 +1,10 @@
 ---
-import { siteInfo } from "@/data/site.json";
-import "@/styles/global.css";
-import Header from "@/components/layouts/Header.astro";
-import Footer from "@/components/layouts/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
-import Background from "@/components/layouts/Background.astro";
+import { siteInfo } from '@/data/site.json';
+import '@/styles/global.css';
+import Header from '@/components/layouts/Header.astro';
+import Footer from '@/components/layouts/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import Background from '@/components/layouts/Background.astro';
 
 interface Props {
   title: string;
@@ -21,16 +21,23 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description ?? siteInfo.description} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#EF802F" />
+    <meta name="theme-color" content="#EF802F" />
     <title>{title} · {siteInfo.name}</title>
   </head>
-  <body
-    class="bg-background relative flex min-h-screen flex-col justify-between text-bark-50"
-  >
-    <Header />
-    <main class="pt-16">
-      <slot />
-    </main>
-    <Footer />
-    <Background />
+  <body>
+    <div class="relative flex min-h-screen flex-col bg-background text-bark-50">
+      <Header />
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer />
+      <Background />
+    </div>
   </body>
 </html>
