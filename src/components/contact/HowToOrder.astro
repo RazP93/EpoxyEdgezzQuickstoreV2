@@ -1,28 +1,21 @@
 ---
-import { siteInfo } from "@/data/site.json";
-
-const { email, phone } = siteInfo;
+import { siteInfo, pages } from '@/data/site.json';
+import { Link } from '@/components/ui/Link';
 ---
 
 <section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <p class="font-Helvetica mt-2 text-lg">
-      To order from our ever-changing stock:
-    </p>
-    <br />
-    <ol class="font-Helvetica list-decimal pl-6 text-lg">
-      <li>Reach out via phone or e-mail</li>
-      <li>We'll send you pictures of our current raw shapes stock</li>
-      <li>Choose the piece that suits you, and we'll take care of the rest</li>
+  <div class="mx-auto flex max-w-2xl flex-col gap-4 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h3 class="text-lg font-bold">How to order from our ever-changing stock</h3>
+    <ul class="list-decimal pl-8 text-caramel-100 marker:font-bold marker:text-caramel-400">
+      <li>Reach out via phone or e-mail below.</li>
       <li>
-        We'll present you with different options for table legs when it's close
-        to completion
+        We'll send you pictures of our current raw shapes stock, or check our stock
+        <Link href={pages.GALLERY.href}>here</Link>.
       </li>
-    </ol>
-    <p class="font-Helvetica mt-4 text-lg">
-      E-Mail: {email}
-      <br />
-       Phone: {phone}
-    </p>
+      <li>Choose the piece that suits you, and we'll take care of the rest.</li>
+      <li>
+        We'll present you with different options for table legs when it's close to completion.
+      </li>
+    </ul>
   </div>
 </section>

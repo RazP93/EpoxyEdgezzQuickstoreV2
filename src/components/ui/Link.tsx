@@ -11,10 +11,19 @@ const linkVariants = cva(
       variant: {
         default:
           'text-caramel underline decoration-dotted decoration-1 underline-offset-2 decoration-caramel-300/50 hover:decoration-solid hover:decoration-caramel-300 hover:text-caramel-400',
+        button: 'rounded-full h-10 px-4 py-2',
+      },
+      theme: {
+        default: '',
+        primary:
+          'bg-caramel text-bark-950 hover:bg-caramel/80 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caramel-300 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 focus-visible:bg-caramel-400',
+        secondary:
+          'border-2 bg-background hover:bg-caramel/50 hover:border-caramel ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caramel-300 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
       },
     },
     defaultVariants: {
       variant: 'default',
+      theme: 'default',
     },
   }
 );
@@ -27,7 +36,7 @@ export interface LinkProps
 }
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ className, variant, asChild = false, ...props }, ref) => {
+  ({ className, variant, theme, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'a';
     const isExternal = props.href && /^(https?:\/\/)/.test(props.href);
 
@@ -42,7 +51,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 
     return (
       <Comp
-        className={cn(linkVariants({ variant, className }))}
+        className={cn(linkVariants({ variant, theme, className }))}
         ref={ref}
         {...props}
         target={isExternal && '_blank'}
