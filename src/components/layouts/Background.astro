@@ -1,9 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import bgImage from '@/images/background.jpg';
+import { twMerge } from 'tailwind-merge';
+
+const { class: className } = Astro.props;
 ---
 
-<div class="pointer-events-none fixed inset-0 overflow-hidden">
+<div class:list={twMerge(['pointer-events-none fixed inset-0 overflow-hidden', className])}>
   <Image
     src={bgImage}
     alt="Background image"

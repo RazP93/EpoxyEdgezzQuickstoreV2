@@ -32,12 +32,12 @@ const { description, title } = Astro.props;
   </head>
   <body>
     <div class="relative flex min-h-screen flex-col bg-background text-bark-50">
-      <Header />
-      <main class="flex-1">
+      <Header class="z-20" />
+      <main class="z-10 flex-1">
         <slot />
       </main>
-      <Footer />
-      <Background />
+      <Footer class="z-20" />
+      <Background class="z-0" />
     </div>
   </body>
 </html>

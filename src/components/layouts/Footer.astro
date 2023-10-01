@@ -1,18 +1,20 @@
 ---
-import { pages } from "@/data/site.json";
-import { setPagesArray, trimPathname } from "@/lib/utils";
+import { pages } from '@/data/site.json';
+import { setPagesArray, trimPathname } from '@/lib/utils';
+import { twMerge } from 'tailwind-merge';
 
 const pagesArray = setPagesArray(pages);
 
 const currentPath = trimPathname(Astro.url.pathname);
+const { class: className } = Astro.props;
 ---
 
 <footer
-  class="flex flex-col items-center gap-1 text-center"
+  class:list={twMerge(['flex flex-col items-center gap-1 text-center', className])}
   aria-labelledby="footer-heading"
 >
   <h2 id="footer-heading" class="sr-only">Footer</h2>
-  <nav class="xs:gap-8 flex flex-wrap items-center gap-2 p-2">
+  <nav class="flex flex-wrap items-center gap-2 p-2 xs:gap-8">
     {
       pagesArray.map(({ inFooter, name, href }) => {
         if (inFooter) {
@@ -21,8 +23,8 @@ const currentPath = trimPathname(Astro.url.pathname);
               href={href}
               class={`flex gap-1 transition-colors duration-300 hover:text-caramel-500 ${
                 href === currentPath
-                  ? "font-bold text-caramel-400 underline decoration-caramel-400/50 decoration-dotted decoration-1 underline-offset-4"
-                  : "text-caramel-200"
+                  ? 'font-bold text-caramel-400 underline decoration-caramel-400/50 decoration-dotted decoration-1 underline-offset-4'
+                  : 'text-caramel-200'
               }`}
             >
               <span>{name}</span>
@@ -33,7 +35,7 @@ const currentPath = trimPathname(Astro.url.pathname);
     }
   </nav>
   <div
-    class="flex w-full items-center justify-center gap-1 border-t border-bark-500/10 p-2 text-center text-sm text-persimmon"
+    class="flex w-full items-center justify-center gap-1 border-t border-bark-500/10 p-2 text-center text-sm text-persimmon backdrop-blur-sm"
   >
     <span>&copy; {new Date().getFullYear()} · Designed with love by Raz</span>
   </div>

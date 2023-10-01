@@ -2,16 +2,21 @@
 import { siteInfo, pages } from '@/data/site.json';
 import { setPagesArray, trimPathname } from '@/lib/utils';
 import { Image } from 'astro:assets';
+import { twMerge } from 'tailwind-merge';
 import logoSrc from '@/images/logo.svg';
 
 const { name } = siteInfo;
 const pagesArray = setPagesArray(pages);
 
 const currentPath = trimPathname(Astro.url.pathname);
+const { class: className } = Astro.props;
 ---
 
 <div
-  class="sticky top-0 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-sm md:flex-row md:px-8"
+  class:list={twMerge([
+    'sticky top-0 z-10 flex w-full flex-col items-center justify-between gap-4 p-4 backdrop-blur-sm md:flex-row md:px-8',
+    className,
+  ])}
 >
   <a href="/">
     <span class="sr-only">{name}</span>
