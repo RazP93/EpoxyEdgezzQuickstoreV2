@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const linkVariants = cva(
-  'inline-flex self-center items-center gap-1 justify-center rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:bg-caramel-300/10 focus-visible:ring-2 focus-visible:ring-caramel-300/10 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center gap-1 justify-center rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:bg-caramel-300/10 focus-visible:ring-2 focus-visible:ring-caramel-300/10 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -41,7 +41,13 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     ) : null;
 
     return (
-      <Comp className={cn(linkVariants({ variant, className }))} ref={ref} {...props}>
+      <Comp
+        className={cn(linkVariants({ variant, className }))}
+        ref={ref}
+        {...props}
+        target={isExternal && '_blank'}
+        rel={isExternal && 'noopener noreferrer'}
+      >
         {props.children}
         {externalIcon}
       </Comp>
