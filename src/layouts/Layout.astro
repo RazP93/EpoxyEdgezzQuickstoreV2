@@ -3,7 +3,6 @@ import { siteInfo } from '@/data/site.json';
 import '@/styles/global.css';
 import Header from '@/components/layouts/Header.astro';
 import Footer from '@/components/layouts/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
 import Background from '@/components/layouts/Background.astro';
 
 interface Props {
@@ -31,7 +30,7 @@ const { description, title } = Astro.props;
     <title>{title} · {siteInfo.name}</title>
   </head>
   <body>
-    <div class="relative flex min-h-screen flex-col bg-background text-bark-50">
+    <div class="relative flex min-h-screen flex-col overflow-hidden bg-background text-bark-50">
       <Header class="z-20" />
       <main class="z-10 flex-1">
         <slot />

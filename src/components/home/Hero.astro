@@ -1,14 +1,15 @@
 ---
-import { siteInfo, pages } from "@/data/site.json";
-import { Icon } from "astro-icon";
-import { buttonVariants } from "@/components/ui/Button";
+import { siteInfo, pages } from '@/data/site.json';
+import { Icon } from 'astro-icon';
+import { buttonVariants } from '@/components/ui/button';
+import { Link } from '../ui/link';
 ---
 
 <section class="py-16 sm:py-20">
   <div class="relative mx-auto max-w-7xl p-24 px-8 md:px-12 lg:px-36">
     <div class="mx-auto text-center">
       <h1
-        class="text-dynamic-xl bg-gradient-to-br from-caramel-600 to-caramel-300 bg-clip-text font-bold tracking-tighter text-caramel text-transparent"
+        class="bg-gradient-to-br from-caramel-600 to-caramel-300 bg-clip-text text-dynamic-xl font-bold tracking-tighter text-caramel text-transparent"
       >
         EpoxyEdgeZZ
       </h1>
@@ -18,18 +19,19 @@ import { buttonVariants } from "@/components/ui/Button";
     </div>
 
     <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-      <a
-        class={buttonVariants({ variant: "outline", size: "lg" })}
+      <Link
+        variant="button"
+        theme="secondary"
+        size="lg"
         href={siteInfo.socials.instagram}
-        rel="noopener noreferrer"
-        target="_blank"
+        icon={false}
       >
         <Icon name="fa:instagram" class="h-4 w-4" />
         <span>Instagram</span>
-      </a>
-      <a class={buttonVariants({ size: "lg" })} href={pages.GALLERY.href}>
+      </Link>
+      <Link variant="button" theme="primary" size="lg" href={pages.GALLERY.href}>
         <span>See gallery</span>
-      </a>
+      </Link>
     </div>
   </div>
 </section>

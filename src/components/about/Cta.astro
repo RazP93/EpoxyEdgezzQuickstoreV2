@@ -1,6 +1,6 @@
 ---
 import { pages } from '@/data/site.json';
-import { buttonVariants } from '../ui/Button';
+import { Link } from '../ui/link';
 ---
 
 <section class="py-16 sm:py-20">
@@ -18,9 +18,7 @@ import { buttonVariants } from '../ui/Button';
           business owner, we're here to collaborate with you and make your design dreams a reality.
         </p>
       </div>
-      <a class={buttonVariants({ size: 'lg' })} href={pages.GALLERY.href}>
-        <span>See gallery</span>
-      </a>
+      <Link variant="button" theme="primary" href={pages.GALLERY.href}>See gallery</Link>
     </div>
   </div>
 </section>
