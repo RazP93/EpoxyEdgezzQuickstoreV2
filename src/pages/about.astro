@@ -1,15 +1,15 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Heading from "@/components/about/Heading.astro";
-import Product from "@/components/about/Product.astro";
-import Values from "@/components/about/Values.astro";
-import Cta from "@/components/about/Cta.astro";
-import Thanks from "@/components/about/Thanks.astro";
-import { pages } from "@/data/site.json";
+import Layout from '@/layouts/Layout.astro';
+import Product from '@/components/about/Product.astro';
+import Values from '@/components/about/Values.astro';
+import Cta from '@/components/about/Cta.astro';
+import Thanks from '@/components/about/Thanks.astro';
+import { pages } from '@/data/site.json';
+import PageTitle from '@/components/layouts/PageTitle.astro';
 ---
 
 <Layout title={pages.ABOUT.title} description={pages.ABOUT.description}>
-  <Heading />
+  <PageTitle title={pages.ABOUT.title} tagline={pages.ABOUT.tagline} />
   <Product />
   <Values />
   <Cta />

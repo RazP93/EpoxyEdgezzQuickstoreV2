@@ -1,15 +1,19 @@
-<section class="py-10 sm:py-14">
+---
+const { title, tagline } = Astro.props;
+---
+
+<section class="py-5 sm:py-14">
   <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-2">
       <h1
         class="bg-gradient-to-br from-caramel-600 to-caramel-300 bg-clip-text text-dynamic-lg font-bold tracking-tighter text-caramel text-transparent"
       >
-        About us
+        {title}
       </h1>
       <p
-        class="text-dynamic-md xs:font-bold mx-auto max-w-xl font-semibold tracking-tight text-bark-400/70"
+        class="mx-auto max-w-xl text-dynamic-md font-semibold tracking-tight text-bark-400/70 xs:font-bold"
       >
-        Crafting timeless elegance with epoxy creations.
+        {tagline}
       </p>
     </div>
   </div>

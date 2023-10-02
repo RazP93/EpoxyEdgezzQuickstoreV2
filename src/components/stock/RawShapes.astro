@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import { ImageLightbox } from '../ui/lightbox';
+
+const stockImages = await Astro.glob('../../assets/products/stock/*.{jpg,jpeg,png}').then(
+  (files) => {
+    return files.map((file) => file.default);
+  }
+);
+
+const thumbnailImages = await Astro.glob(
+  '../../assets/products/stock/thumbnails/*.{jpg,jpeg,png}'
+).then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<section class="py-5 sm:py-14">
+  <div class="relative mx-auto max-w-5xl px-5">
+    <div class="grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3">
+      {
+        stockImages.map((image, index) => (
+          <ImageLightbox
+            imageSrc={JSON.stringify(image)}
+            title="Title about an epoxy table"
+            description="A witty description about the epoxy table."
+            client:load
+          >
+            <Image
+              src={thumbnailImages[index]}
+              alt="Product image of epoxy resin table"
+              class="select-none"
+              loading="lazy"
+            />
+            <span class="sr-only">Show image</span>
+          </ImageLightbox>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+---
+import { pages } from '@/data/site.json';
+import Layout from '@/layouts/Layout.astro';
+import Products from '@/components/gallery/Products.astro';
+import PageTitle from '@/components/layouts/PageTitle.astro';
+---
+
+<Layout title={pages.GALLERY.title} description={pages.GALLERY.description}>
+  <PageTitle title={pages.GALLERY.title} tagline={pages.GALLERY.tagline} />
+  <Products />
+</Layout>
