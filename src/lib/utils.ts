@@ -19,6 +19,7 @@ interface Page {
   inFooter: boolean;
   description?: string;
   ogImage?: string | null;
+  tagline?: string;
 }
 
 export function setPagesArray(pages: Record<string, Page>): Page[] {

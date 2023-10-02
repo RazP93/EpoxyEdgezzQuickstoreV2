@@ -25,7 +25,8 @@
         "ABOUT": {
             "name": "About",
             "href": "/about",
-            "title": "About Us",
+            "title": "About us",
+            "tagline": "Crafting timeless elegance with epoxy creations.",
             "description": "Learn more about our history, values, mission, and more. We are a collection of people who hold similar ideals.",
             "ogImage": null,
             "inHeader": true,
@@ -34,16 +35,27 @@
         "GALLERY": {
             "name": "Gallery",
             "href": "/gallery",
-            "title": "Product Gallery",
+            "title": "Product gallery",
+            "tagline": "Explore our photo portfolio of completed projects.",
             "description": "Browse our gallery of past projects. We have a wide range of projects from resin furniture to resin flooring.",
             "ogImage": null,
             "inHeader": true,
             "inFooter": true
         },
+        "STOCK": {
+            "name": "Stock",
+            "href": "/stock",
+            "title": "Raw materials",
+            "tagline": "Browse our range of raw wood shapes for your table.",
+            "description": "Browse our range of raw wood shapes for your table. We have a wide range of shapes and sizes to choose from.",
+            "ogImage": null,
+            "inHeader": false,
+            "inFooter": false
+        },
         "PRIVACY": {
             "name": "Privacy",
             "href": "/privacy",
-            "title": "Privacy Policy",
+            "title": "Privacy policy",
             "description": "Our privacy policy outlines how we collect, use, and store your data. We take your privacy very seriously.",
             "ogImage": null,
             "inHeader": false,
@@ -52,7 +64,7 @@
         "CONTACT": {
             "name": "Contact",
             "href": "/contact",
-            "title": "Contact Us",
+            "title": "Contact us",
             "description": "Get in touch with us today to discuss your project. We are always happy to help.",
             "ogImage": null,
             "inHeader": true,
@@ -61,7 +73,7 @@
         "404": {
             "name": "404",
             "href": "/404",
-            "title": "Page Not Found",
+            "title": "Page not found",
             "description": "Page not found. Please check the URL in the address bar and try again.",
             "ogImage": null,
             "inHeader": false,
@@ -70,7 +82,7 @@
         "500": {
             "name": "500",
             "href": "/500",
-            "title": "Internal Server Error",
+            "title": "Internal server error",
             "description": "Internal server error. Please try again later.",
             "ogImage": null,
             "inHeader": false,
