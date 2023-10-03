@@ -1,7 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { pages } from '@/data/site.json';
-import { Link } from '@/components/ui/link';
+// import { Link } from '@/components/ui/link';
 
 const { title, description, name } = pages[404];
 ---
@@ -20,7 +20,7 @@ const { title, description, name } = pages[404];
           <p class="text-caramel-100">{description}</p>
         </div>
         <div class="flex gap-4">
-          <Link
+          <!-- <Link
             href="javascript:history.back()"
             variant="button"
             theme="secondary"
@@ -38,7 +38,7 @@ const { title, description, name } = pages[404];
             <span>Go home</span><span
               class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span
             >
-          </Link>
+          </Link> -->
         </div>
       </div>
     </div>
