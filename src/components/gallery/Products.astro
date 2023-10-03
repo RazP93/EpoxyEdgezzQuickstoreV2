@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { ImageLightbox } from '../ui/lightbox';
+import { ImageLightbox } from '@/components/ui/lightbox';
 
 const productImages = await Astro.glob('../../assets/products/finished/*.{jpg,jpeg,png}').then(
   (files) => {
