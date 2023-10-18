@@ -62,7 +62,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         className={cn(linkVariants({ variant, theme, size, className }))}
         ref={ref}
         {...props}
-        target={isExternal && '_blank'}
+        target={isExternal ? '_blank' : undefined}
         rel={isExternal && 'noopener noreferrer'}
       >
         {props.children}
