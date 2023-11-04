@@ -2,14 +2,14 @@
 import { Image } from 'astro:assets';
 import { ImageLightbox } from '@/components/ui/lightbox';
 
-const productImages = await Astro.glob('../../assets/products/finished/*.{jpg,jpeg,png}').then(
+const productImages = await Astro.glob('../../assets/products/featured/*.{jpg,jpeg,png}').then(
   (files) => {
     return files.map((file) => file.default);
   }
 );
 
 const thumbnailImages = await Astro.glob(
-  '../../assets/products/finished/thumbnails/*.{jpg,jpeg,png}'
+  '../../assets/products/featured/thumbnails/*.{jpg,jpeg,png}'
 ).then((files) => {
   return files.map((file) => file.default);
 });

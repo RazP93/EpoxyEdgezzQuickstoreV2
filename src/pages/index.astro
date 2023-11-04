@@ -2,8 +2,10 @@
 import Layout from '@/layouts/Layout.astro';
 import Hero from '@/components/home/Hero.astro';
 import { pages } from '@/data/site.json';
+import Featured from '@/components/home/Featured.astro';
 ---
 
 <Layout title={pages.HOME.title} description={pages.HOME.description}>
   <Hero />
+  <Featured />
 </Layout>

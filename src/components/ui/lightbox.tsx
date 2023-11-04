@@ -36,11 +36,6 @@ export function ImageLightbox({ imageSrc, title, description, children }: ImageL
               loading="eager"
             />
           </div>
-          <DialogFooter>
-            A nice footer that might contain other angles of this particular table, or a button with
-            a 'mailto:' link with the subject line and some of the body already filled out (for the
-            "stock" gallery).
-          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
