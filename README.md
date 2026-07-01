@@ -1,34 +1,48 @@
-# Astro & Tailwind CSS Starter Kit
-## Template Integrations
-- @astrojs/tailwind - https://docs.astro.build/en/guides/integrations-guide/tailwind/
-- @astrojs/sitemap - https://docs.astro.build/en/guides/integrations-guide/sitemap/
+# EpoxyEdgezz Quickstore
 
-## Template Structure
-Inside of your Astro project, you'll see the following folders and files:
-```
-/
-├── public/
-├── src/
-│   └── components/
-│   └── layouts/
-│   └── pages/
-│       └── index.astro
-│   └── styles/
-└── package.json
-```
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-Any static assets, like images, can be placed in the `public/` directory.
+Static marketing site for EpoxyEdgezz, built with Astro 3 and Tailwind CSS.
+
+## Stack
+
+- [Astro 3](https://astro.build) — static site generator
+- [Tailwind CSS v3](https://tailwindcss.com) via `@astrojs/tailwind`
+- React (interactive islands only — lightbox, UI components)
+- Radix UI primitives
+
 ## Commands
-All commands are run from the root of the project, from a terminal:
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-## Want to learn more?
-Feel free to check Astroäs [documentation](https://docs.astro.build)
-# quickstore
+
+All commands are run from the root of the project:
+
+| Command             | Action                                        |
+| :------------------ | :-------------------------------------------- |
+| `npm install`       | Install dependencies                          |
+| `npm run dev`       | Start local dev server at `localhost:4321`    |
+| `npm run build`     | Build production site to `./dist/`            |
+| `npm run preview`   | Preview the production build locally          |
+
+## Project Structure
+
+```
+src/
+├── _data/
+│   └── site.json          ← single source of truth for site content & nav
+├── assets/
+│   └── products/
+│       ├── featured/       ← full-size + thumbnails/
+│       ├── finished/       ← full-size + thumbnails/
+│       └── stock/          ← full-size + thumbnails/
+├── components/
+│   ├── {page-name}/        ← section components per page
+│   └── ui/                 ← React interactive islands
+├── layouts/
+├── lib/
+│   └── utils.ts
+└── pages/
+```
+
+## Key Conventions
+
+- **Content**: Edit `src/_data/site.json` for contact info, page metadata, and nav visibility.
+- **Images**: Each image needs a matching thumbnail in the `thumbnails/` subdirectory at the same array index position. Both files must be added together.
+- **Tailwind tokens**: Use `caramel`, `bark`, `persimmon`, and `pine` color scales — not generic Tailwind colors.
+- **React islands**: Add `client:load` on the call site; React is only used in `src/components/ui/`.
