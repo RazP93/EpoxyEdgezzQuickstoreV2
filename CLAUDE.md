@@ -5,16 +5,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-pnpm dev        # start dev server
-pnpm build      # production build
-pnpm preview    # preview the production build
+npm run dev     # start dev server
+npm run build   # production build
+npm run preview # preview the production build
 ```
 
-No lint or test scripts are configured. Prettier is available (`pnpm prettier`) with `prettier-plugin-astro` and `prettier-plugin-tailwindcss`.
+No lint or test scripts are configured. Prettier is available (`npm run prettier`) with `prettier-plugin-astro` and `prettier-plugin-tailwindcss`.
 
 ## Architecture
 
-Astro 3 static site with React for interactive islands. Package manager is **pnpm**.
+Astro 3 static site with React for interactive islands. Package manager is **npm**.
 
 ### Data layer
 
