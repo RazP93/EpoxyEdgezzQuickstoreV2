@@ -1,6 +1,5 @@
 ---
-import { siteInfo, pages } from '@/data/site.json';
-import { Icon } from 'astro-icon';
+import { pages } from '@/data/site.json';
 import { Link } from '@/components/ui/link';
 ---
 
@@ -18,16 +17,6 @@ import { Link } from '@/components/ui/link';
     </div>
 
     <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-      <Link
-        variant="button"
-        theme="secondary"
-        size="lg"
-        href={siteInfo.socials.instagram}
-        icon={false}
-      >
-        <Icon name="fa:instagram" class="h-4 w-4" />
-        <span>Instagram</span>
-      </Link>
       <Link variant="button" theme="primary" size="lg" href={pages.GALLERY.href}>
         <span>See gallery</span>
       </Link>

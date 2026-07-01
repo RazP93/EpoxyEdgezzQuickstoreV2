@@ -13,6 +13,21 @@ const thumbnailImages = await Astro.glob(
 ).then((files) => {
   return files.map((file) => file.default);
 });
+
+const captions = [
+  {
+    title: 'Live-Edge Oak Slab',
+    description: 'A beautifully natural oak slab with an untouched live edge, ready to become your statement river table.',
+  },
+  {
+    title: 'Burr Elm Slab',
+    description: 'A richly figured burr elm slab with dramatic grain patterns — ideal for a centrepiece coffee or dining table.',
+  },
+  {
+    title: 'Walnut Book-Match Pair',
+    description: 'A matching pair of walnut slabs cut from the same log, perfect for a symmetrical river table with a striking epoxy centre channel.',
+  },
+];
 ---
 
 <section class="py-5 sm:py-14">
@@ -22,8 +37,8 @@ const thumbnailImages = await Astro.glob(
         stockImages.map((image, index) => (
           <ImageLightbox
             imageSrc={JSON.stringify(image)}
-            title="Title about an epoxy table"
-            description="A witty description about the epoxy table."
+            title={captions[index]?.title}
+            description={captions[index]?.description}
             client:load
           >
             <Image
